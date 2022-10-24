@@ -1,0 +1,49 @@
+
+@font-face {
+    font-family: defaulfon;
+    src: url('../font/Segoe.ttf') format("ttf");
+}
+*{
+  font-family:defaulfon !important ;
+}
+.box{
+  min-height:90vh;
+}
+.bx{
+  font-size: 30px;
+    color: #75750a;
+    font-weight: 600 !important;
+}
+.mouse{
+  cursor: pointer;
+}
+.bg {
+  background-image: url('../../bundle/img/wp.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.b3 {
+  background-image: url('../../bundle/img/wp3.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.b4 {
+  background-image: url('../../bundle/img/wp4.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.b5 {
+  background-image: url('../../bundle/img/wp5.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.b6 {
+  background-image: url('../../bundle/img/wp6.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
