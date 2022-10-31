@@ -507,9 +507,9 @@ class Dataload extends CI_Controller
         if ($cek['respon'] == '404') {
           $msg = ['respon' => '404', 'messages' => $cek['message']];
         } else if ($cek['respon'] == '200') {
-          $ftp_config['hostname'] = 'ftp.ptscu.net';
-          $ftp_config['username'] = 'adex@ptscu.net';
-          $ftp_config['password'] = '@qaz741852963';
+          // $ftp_config['hostname'] = 'ftp.ptscu.net';
+          // $ftp_config['username'] = 'adex@ptscu.net';
+          // $ftp_config['password'] = '@qaz741852963';
           $ftp_config['port']     = 21;
           $ftp_config['passive']  = FALSE;
           $ftp_config['debug']    = TRUE;
