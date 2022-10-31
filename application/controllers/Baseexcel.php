@@ -486,9 +486,7 @@ class Baseexcel extends CI_Controller
 
     $no = 1;
     $x = 5;
-    $scan = 0;
     foreach ($dt as  $row) {
-        $scan +=$row->onganscan;
         $sheet->setCellValue('A' . $x, $no++);
         $sheet->setCellValue('B' . $x, $row->ean);
         $sheet->setCellValue('C' . $x, $row->item_id);
@@ -497,9 +495,6 @@ class Baseexcel extends CI_Controller
         $sheet->setCellValue('F' . $x, $row->nama);
       $x++;
     }
-    $ii = $x;
-     $sheet->setCellValue('A' . $ii,'Total');
-     $sheet->setCellValue('E' . $ii,$scan);
     for ($i = 'A'; $i != $spreadsheet->getActiveSheet()->getHighestColumn(); $i++) {
       $spreadsheet->getActiveSheet()->getColumnDimension($i)->setAutoSize(true);
     }

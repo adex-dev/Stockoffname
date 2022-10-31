@@ -49,7 +49,7 @@
                <form enctype="multipart/form-data">
                  <div class="input-group mb-3">
                    <label class="input-group-text" for="">Rak Store</label>
-                   <select name="floor" class="form-select" aria-label="Default select example">
+                   <select required name="floor" class="form-select" aria-label="Default select example">
                      <option value="">Pilih Rak</option>
                      <?php for ($i = 1; $i <= 100; $i++) : ?>
                        <option value="rak-<?= $i ?>">Rak-<?= $i ?></option>
