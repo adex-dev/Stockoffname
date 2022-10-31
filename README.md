@@ -8,11 +8,11 @@ Step Pertama :
 
 Step Kedua :
 
--Buka Xampp Anda.
--Buka Browser Anda dan Ketikan 'localhost/phpmyadmin'
--Klik Import
--Masukan file 'localaudit.sql' yang berada di folder 'DB'
--klik Go / Kirim.
+- Buka Xampp Anda.
+- Buka Browser Anda dan Ketikan 'localhost/phpmyadmin'
+- Klik Import
+- Masukan file 'localaudit.sql' yang berada di folder 'DB'
+- klik Go / Kirim.
 
 Step KeTiga:
 
@@ -22,10 +22,10 @@ Step KeTiga:
 
 Tools yang digunakan program ini.
 
--Codeigniter versi 3
+- Codeigniter versi 3
 
 plugin
 
--webpack, webpack cli. buble webpack.
--guzzle
--php spreadsheet
+- webpack, webpack cli. buble webpack.
+- guzzle
+- php spreadsheet
