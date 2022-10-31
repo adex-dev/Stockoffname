@@ -315,15 +315,9 @@ class Baseexcel extends CI_Controller
 
     $no = 1;
     $x = 5;
-    $qty = 0;
-    $scan = 0;
-    $diff = 0;
     foreach ($dt as  $row) {
       $diffrent = (int) $row->onhand_scan - (int) $row->onhand_qty;
       if ($diffrent != 0) {
-        $qty +=$row->onhand_qty;
-        $scan +=$row->onhand_scan;
-        $diff +=$diffrent;
         $sheet->setCellValue('A' . $x, $no++);
         $sheet->setCellValue('B' . $x, $row->ean);
         $sheet->setCellValue('C' . $x, $row->item_description);
@@ -337,11 +331,6 @@ class Baseexcel extends CI_Controller
       }
       $x++;
     }
-    $ii = $x;
-     $sheet->setCellValue('A' . $ii,'Total');
-     $sheet->setCellValue('G' . $ii,$qty);
-     $sheet->setCellValue('H' . $ii,$scan);
-     $sheet->setCellValue('I' . $ii,$diff);
     for ($i = 'A'; $i != $spreadsheet->getActiveSheet()->getHighestColumn(); $i++) {
       $spreadsheet->getActiveSheet()->getColumnDimension($i)->setAutoSize(true);
     }
@@ -486,7 +475,9 @@ class Baseexcel extends CI_Controller
 
     $no = 1;
     $x = 5;
+    $scan = 0;
     foreach ($dt as  $row) {
+        $scan +=$row->onganscan;
         $sheet->setCellValue('A' . $x, $no++);
         $sheet->setCellValue('B' . $x, $row->ean);
         $sheet->setCellValue('C' . $x, $row->item_id);
@@ -495,6 +486,9 @@ class Baseexcel extends CI_Controller
         $sheet->setCellValue('F' . $x, $row->nama);
       $x++;
     }
+    $ii = $x;
+     $sheet->setCellValue('A' . $ii,'Total');
+     $sheet->setCellValue('E' . $ii,$scan);
     for ($i = 'A'; $i != $spreadsheet->getActiveSheet()->getHighestColumn(); $i++) {
       $spreadsheet->getActiveSheet()->getColumnDimension($i)->setAutoSize(true);
     }
