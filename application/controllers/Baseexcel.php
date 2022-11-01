@@ -328,8 +328,8 @@ class Baseexcel extends CI_Controller
         $sheet->setCellValue('H' . $x, $row->onhand_scan);
         $sheet->setCellValue('I' . $x, $diffrent);
         $sheet->setCellValue('J' . $x, $this->session->userdata('storename'));
+        $x++;
       }
-      $x++;
     }
     for ($i = 'A'; $i != $spreadsheet->getActiveSheet()->getHighestColumn(); $i++) {
       $spreadsheet->getActiveSheet()->getColumnDimension($i)->setAutoSize(true);
